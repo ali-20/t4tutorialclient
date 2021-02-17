@@ -1,0 +1,158 @@
+.Main {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(222, 230, 119);
+}
+
+.content_container {
+  max-width: 80vw;
+  min-height: 100vh;
+
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h1 {
+  line-height: 2;
+  text-transform: uppercase;
+  color: rgb(8, 110, 68);
+  text-shadow: 4px 4px 10px gray;
+  margin-right: 10px;
+
+  cursor: default;
+}
+
+/* .title h1:hover {
+  transform: scale(1.2);
+} */
+
+.Searchbar {
+  width: 100%;
+  background-color: khaki;
+  display: flex;
+  padding: 20px 0px 20px 0px;
+}
+
+.input {
+  width: 95%;
+}
+
+input {
+  width: 90%;
+  border: none;
+  height: 2vh;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+input:focus {
+  animation: lineslide 0.3s linear forwards;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon:hover {
+  transform: scale(1.4);
+  color: red;
+}
+
+.SearchResults {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(25, 235, 235);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardcontainer {
+  width: 90%;
+  min-height: 20vh;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  margin-top: 5vh;
+}
+
+button {
+  font-size: 2rem;
+  padding: 0px 5px 0px 5px;
+  border: none;
+  outline: none;
+  transition: all 0.3s linear;
+}
+
+button:hover {
+  background-color: black;
+  color: aqua;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: lightblue;
+}
+
+.loading {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  animation: loading 1s infinite linear forwards;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lineslide {
+  from {
+    box-shadow: 0px 0px 0px rgb(226, 158, 181);
+    border: 0px solid pink;
+  }
+  to {
+    box-shadow: 1px 2px 40px rgb(247, 166, 193);
+    border: 1px solid palevioletred;
+  }
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 500px) {
+  .content_container {
+    max-width: 100vw;
+  }
+
+  .title h1 {
+    font-size: 1rem;
+  }
+  input {
+    width: 70%;
+  }
+}
